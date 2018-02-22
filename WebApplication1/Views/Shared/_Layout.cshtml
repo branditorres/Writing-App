@@ -3,12 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title </title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
 </head>
 <body>
+
     <div class="navbar">
         <div class="container">
             <div class="navbar-header">
@@ -17,18 +19,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                    @Html.ActionLink("Writing App", "Index", new { area = "" }, new { @class = "navbar-brand" })
-                    @Html.ActionLink("About", "About", "Home", new { @class = "navbar-brand" })
-                    @Html.ActionLink("Contact", "Contact", "Home", new { @class = "navbar-brand" })
+                @Html.ActionLink("Fading Writers", "Index", "Home", new { @class = "navbar-brand" })
+                @Html.ActionLink("About", "About", "Home", new { @class = "navbar-brand" })
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
+
+
     <div class="container body-content">
         @RenderBody()
+
+
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Writing App</p>
+        <footer class="pretty">
+            <p>&copy; @DateTime.Now.Year - Fading Writers</p>
         </footer>
     </div>
 
@@ -37,3 +42,4 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+

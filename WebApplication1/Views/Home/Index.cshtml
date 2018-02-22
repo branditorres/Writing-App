@@ -1,42 +1,136 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Fading Writers";
 }
 
+<div class="bg"><img src="~/Content/5.jpg" /></div>
 
-<div class="header"></div>
+<div class="row">
 
-<main class="about">
-
-    <main class="about-header">What is it?</main>
-
-    <div class="row">
-        <div class="col-md-4">
-
-            <img src="http://via.placeholder.com/175x175">
-
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-           
-        </div>
-        <div class="col-md-4">
-
-            <img src="http://via.placeholder.com/175x175">
-
-            <h2>Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-          
-        </div>
-        <div class="col-md-4">
-
-            <img src="http://via.placeholder.com/175x175">
-
-            <h2>Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            
-        </div>
+    <div class="column-2">
+        <img src="~/Content/1.png" />
     </div>
-</main>
+
+    <div class="column-2">
+        <h3>Fading Writers</h3>
+
+        <p class="intro">
+            Created from one tired and overwhelmed writer to another, Fading Writers is for writers to keep their characters and
+            stories easily organized and to help further develop them. It's easy to organize and share your ideas, either with people
+            that you choose to have view your projects or with whoever stumbles across your page, and to feel like you have a little
+            more control over you ideas.
+        </p>
+        <p class="intro">
+
+            From the smallest ideas that you come up with on the fly, to the stories that you've been working on for years, Fading
+            Writers is for you.
+
+        </p>
+
+        <p></p>
+
+        <p class="intro">
+            <button class="introbutton" onclick="location.href='@Url.Action("Register","Account")'">Get started</button>
+            
+        </p>
+
+    </div>
+
+</div>
+
+<div class="singlecolumn">how it works</div>
+
+<div class="row">
+    <div class="column-3">
+
+        <img src="~/Content/3.png">
+
+    </div>
+    <div class="column-3">
+
+        <img src="~/Content/4.png">
+
+    </div>
+    <div class="column-3">
+
+        <img src="~/Content/2.png">
+
+    </div>
+</div>
+<div class="row">
+    <div class="column-3">
+
+        <h2>Create</h2>
+        <p>
+            Create pages for your characters and stories to keep track of. Create pages characters that you've had for a couple years or a character
+            that you thought of while half asleep.
+        </p>
+    </div>
+    <div class="column-3">
+
+        <h2>develop</h2>
+        <p>
+            Further develop your characters in your stories and turn them into interesting 3-demensional characters that'll
+            make your stories amazing.
+        </p>
+    </div>
+    <div class="column-3">
+
+        <h2>convenience</h2>
+        <p>
+            Have all your characters, story outlines, snippets, and world building in one place for your convenience as a writer.
+
+        </p>
+    </div>
+</div>
+
+<div class="singlecolumn">Website progress</div>
+
+<p class="progres">
+    <span class="lnr lnr-laptop"> </span> Back end development
+    <div class="progresscontainer">
+        <div class="progress backend">10%</div>
+    </div>
+</p>
+
+<p class="progres">
+    <span class="lnr lnr-picture"> </span> Website Aesthetics
+    <div class="progresscontainer">
+        <div class="progress aesthetics">20%</div>
+    </div>
+</p>
+
+<p class="progres">
+    <span class="lnr lnr-user"> </span> Character development pages
+    <div class="progresscontainer">
+        <div class="progress chara">20%</div>
+    </div>
+</p>
+
+<p class="progres">
+    <span class="lnr lnr-book"> </span> Projects pages
+    <div class="progresscontainer">
+        <div class="progress project">15%</div>
+    </div>
+</p>
+
+<p class="progres">
+    <span class="lnr lnr-users"> </span> User Profiles
+    <div class="progresscontainer">
+        <div class="progress userprofile">20%</div>
+    </div>
+</p>
+
+<p class="progres">
+    <span class="lnr lnr-pencil"> </span> Writing page
+    <div class="progresscontainer">
+        <div class="progress writing">30%</div>
+    </div>
+</p>
+
+<p class="progres">
+    <span class="lnr lnr-earth"> </span> World development pages
+    <div class="progresscontainer">
+        <div class="progress worlddev">0%</div>
+    </div>
+</p>
+
