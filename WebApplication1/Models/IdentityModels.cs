@@ -30,10 +30,12 @@ namespace WebApplication1.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<WebApplication1.Models.Student> Students { get; set; }
 
         public System.Data.Entity.DbSet<WebApplication1.Models.Writing> Writings { get; set; }
+        public System.Data.Entity.DbSet<WebApplication1.Models.CharaInfo> CharaInfo { get; set; }
+        public System.Data.Entity.DbSet<WebApplication1.Models.ProjectInfo> ProjectInfo { get; set; }
+        public System.Data.Entity.DbSet<WebApplication1.Models.UserInfo> UserInfo { get; set; }
 
-        public System.Data.Entity.DbSet<WebApplication1.Models.UserProfile> UserProfiles { get; set; }
+
     }
 }
