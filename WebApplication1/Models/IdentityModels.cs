@@ -33,8 +33,8 @@ namespace WebApplication1.Models
 
         public System.Data.Entity.DbSet<WebApplication1.Models.Writing> Writings { get; set; }
         public System.Data.Entity.DbSet<WebApplication1.Models.CharaInfo> CharaInfo { get; set; }
-        public System.Data.Entity.DbSet<WebApplication1.Models.ProjectInfo> ProjectInfo { get; set; }
-        public System.Data.Entity.DbSet<WebApplication1.Models.UserInfo> UserInfo { get; set; }
+        public System.Data.Entity.DbSet<WebApplication1.Models.ProjectInfo> ProjectInfoes { get; set; }
+        public System.Data.Entity.DbSet<WebApplication1.Models.UserInfo> UserInfoes { get; set; }
 
 
     }

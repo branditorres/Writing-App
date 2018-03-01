@@ -6,7 +6,7 @@
 
 <h2>@ViewBag.Title.</h2>
 <div class="row">
-    <div class="col-md-8">
+    <div class="column-2">
         <section id="loginForm">
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
@@ -51,6 +51,7 @@
             }
         </section>
     </div>
+    <div class="column-2"><img src="http://via.placeholder.com/475x300"></div>
 </div>
 
 @section Scripts {

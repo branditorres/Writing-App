@@ -242,3 +242,19 @@ footer.pretty {
     font-size:11px;
     letter-spacing:5px;
 }
+
+.card {
+    width: 33.33%;
+    float:left;
+}
+
+.card img {
+
+    border-radius:55%;
+
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}

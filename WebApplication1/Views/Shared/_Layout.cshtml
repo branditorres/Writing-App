@@ -19,8 +19,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Fading Writers", "Index", "Home", new { @class = "navbar-brand" })
-                @Html.ActionLink("About", "About", "Home", new { @class = "navbar-brand" })
+                @Html.ActionLink("Fading Writers", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("About", "About", "Home", new { @class = "navbar-brand" })</li>
+                </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>

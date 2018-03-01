@@ -10,107 +10,107 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
-    public class StudentsController : Controller
+    public class Writings1Controller : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Students
+        // GET: Writings1
         public ActionResult Index()
         {
-            return View(db.Students.ToList());
+            return View(db.Writings.ToList());
         }
 
-        // GET: Students/Details/5
+        // GET: Writings1/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
-            if (student == null)
+            Writing writing = db.Writings.Find(id);
+            if (writing == null)
             {
                 return HttpNotFound();
             }
-            return View(student);
+            return View(writing);
         }
 
-        // GET: Students/Create
+        // GET: Writings1/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Students/Create
+        // POST: Writings1/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Fname,Lname")] Student student)
+        public ActionResult Create([Bind(Include = "ID,userId,text,title")] Writing writing)
         {
             if (ModelState.IsValid)
             {
-                db.Students.Add(student);
+                db.Writings.Add(writing);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(student);
+            return View(writing);
         }
 
-        // GET: Students/Edit/5
+        // GET: Writings1/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
-            if (student == null)
+            Writing writing = db.Writings.Find(id);
+            if (writing == null)
             {
                 return HttpNotFound();
             }
-            return View(student);
+            return View(writing);
         }
 
-        // POST: Students/Edit/5
+        // POST: Writings1/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Fname,Lname")] Student student)
+        public ActionResult Edit([Bind(Include = "ID,userId,text,title")] Writing writing)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(student).State = EntityState.Modified;
+                db.Entry(writing).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(student);
+            return View(writing);
         }
 
-        // GET: Students/Delete/5
+        // GET: Writings1/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
-            if (student == null)
+            Writing writing = db.Writings.Find(id);
+            if (writing == null)
             {
                 return HttpNotFound();
             }
-            return View(student);
+            return View(writing);
         }
 
-        // POST: Students/Delete/5
+        // POST: Writings1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Student student = db.Students.Find(id);
-            db.Students.Remove(student);
+            Writing writing = db.Writings.Find(id);
+            db.Writings.Remove(writing);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

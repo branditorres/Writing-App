@@ -10,107 +10,107 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
-    public class UserProfilesController : Controller
+    public class ProjectInfoesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: UserProfiles
+        // GET: ProjectInfoes
         public ActionResult Index()
         {
-            return View(db.UserProfiles.ToList());
+            return View(db.ProjectInfoes.ToList());
         }
 
-        // GET: UserProfiles/Details/5
+        // GET: ProjectInfoes/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            UserProfile userProfile = db.UserProfiles.Find(id);
-            if (userProfile == null)
+            ProjectInfo projectInfo = db.ProjectInfoes.Find(id);
+            if (projectInfo == null)
             {
                 return HttpNotFound();
             }
-            return View(userProfile);
+            return View(projectInfo);
         }
 
-        // GET: UserProfiles/Create
+        // GET: ProjectInfoes/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: UserProfiles/Create
+        // POST: ProjectInfoes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,firstName,lastName,nickName,DateCreated,exp,wordCount")] UserProfile userProfile)
+        public ActionResult Create([Bind(Include = "ID,userId,projectTitle,dateCreated,genre,type,progress,wordCount,triggerWs,charasInvolved")] ProjectInfo projectInfo)
         {
             if (ModelState.IsValid)
             {
-                db.UserProfiles.Add(userProfile);
+                db.ProjectInfoes.Add(projectInfo);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(userProfile);
+            return View(projectInfo);
         }
 
-        // GET: UserProfiles/Edit/5
+        // GET: ProjectInfoes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            UserProfile userProfile = db.UserProfiles.Find(id);
-            if (userProfile == null)
+            ProjectInfo projectInfo = db.ProjectInfoes.Find(id);
+            if (projectInfo == null)
             {
                 return HttpNotFound();
             }
-            return View(userProfile);
+            return View(projectInfo);
         }
 
-        // POST: UserProfiles/Edit/5
+        // POST: ProjectInfoes/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,firstName,lastName,nickName,DateCreated,exp,wordCount")] UserProfile userProfile)
+        public ActionResult Edit([Bind(Include = "ID,userId,projectTitle,dateCreated,genre,type,progress,wordCount,triggerWs,charasInvolved")] ProjectInfo projectInfo)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(userProfile).State = EntityState.Modified;
+                db.Entry(projectInfo).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(userProfile);
+            return View(projectInfo);
         }
 
-        // GET: UserProfiles/Delete/5
+        // GET: ProjectInfoes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            UserProfile userProfile = db.UserProfiles.Find(id);
-            if (userProfile == null)
+            ProjectInfo projectInfo = db.ProjectInfoes.Find(id);
+            if (projectInfo == null)
             {
                 return HttpNotFound();
             }
-            return View(userProfile);
+            return View(projectInfo);
         }
 
-        // POST: UserProfiles/Delete/5
+        // POST: ProjectInfoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            UserProfile userProfile = db.UserProfiles.Find(id);
-            db.UserProfiles.Remove(userProfile);
+            ProjectInfo projectInfo = db.ProjectInfoes.Find(id);
+            db.ProjectInfoes.Remove(projectInfo);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
